@@ -4,8 +4,6 @@ The game now supports running with docker AND running without docker. See below 
 
 ## Playing with docker
 
-You can also run games in Docker, a cross-platform container system. If you followed the previous instructions you DON'T NEED TO DO THIS.
-
 To start, install docker, and make sure it's started.  
 
 ### Unix instructions
