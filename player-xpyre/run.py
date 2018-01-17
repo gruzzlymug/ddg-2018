@@ -64,10 +64,10 @@ def do_knight(unit):
     # print("knight")
     nearby = gc.sense_nearby_units(unit.location.map_location(), 2)
     for other in nearby:
-        # if other.team != my_team and gc.is_attack_ready(unit.id) and gc.can_attack(unit.id, other.id):
-        #     # print('attacked a thing!')
-        #     gc.attack(unit.id, other.id)
-        #     return True
+        if other.team != my_team and gc.is_attack_ready(unit.id) and gc.can_attack(unit.id, other.id):
+            # print('attacked a thing!')
+            gc.attack(unit.id, other.id)
+            return True
         if other.unit_type == bc.UnitType.Rocket and gc.can_load(other.id, unit.id):
             if not other.rocket_is_used():
                 # print("knight boarding rocket")
